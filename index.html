@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador de Números de Loteria</title>
+</head>
+<body>
+    <header>
+        <h1>Gerador de Números</h1>
+        <p>Este é um projeto onde eu testarei minhas habilidades de backend para fazer o sorteio de números aleatórios, sendo gerados aleatóriamente.</p>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2><strong>Gerar números da Mega-Sena</strong></h2>
+
+            <p>Quantidade de números</p>
+            <select id="quantidadeNum">
+                <option value="6" selected>6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+            <form class="imparPar">
+                <div class="impar">
+                    <label for="impar">Números Impares</label>
+                    <input type="radio" value="impar" id="impar" name="imparOuPar">
+                </div>
+                <div class="par">
+                    <label for="par">Números Pares</label>
+                    <input type="radio" value='par' id="par" name="imparOuPar">
+                </div>
+                <div class="ambos">
+                    <label for="parImpar">Ambos</label>
+                    <input type="radio" value="parImpar" id="parImpar" name="imparOuPar" checked>
+                </div>
+            </form>
+    
+            <p><button class="gerar" onclick="numMax(), gerar()">Gerar números</button></p>
+    
+            <div class="numeros">
+                <p>Seus números da sorte!</p>
+                <p id="numerosAparecer"><span>...</span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Esta página esta sujeita a modificações</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
