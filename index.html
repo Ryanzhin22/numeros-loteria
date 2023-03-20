@@ -15,42 +15,117 @@
     
     <main>
         <div class="container">
-            <h2><strong>Gerar números da Mega-Sena</strong></h2>
 
-            <p>Quantidade de números</p>
-            <select id="quantidadeNum">
-                <option value="6" selected>6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-            </select>
-            <form class="imparPar">
-                <div class="impar">
-                    <label for="impar">Números Impares</label>
-                    <input type="radio" value="impar" id="impar" name="imparOuPar">
-                </div>
-                <div class="par">
-                    <label for="par">Números Pares</label>
-                    <input type="radio" value='par' id="par" name="imparOuPar">
-                </div>
-                <div class="ambos">
-                    <label for="parImpar">Ambos</label>
-                    <input type="radio" value="parImpar" id="parImpar" name="imparOuPar" checked>
-                </div>
-            </form>
-    
-            <p><button class="gerar" onclick="numMax(), gerar()">Gerar números</button></p>
-    
-            <div class="numeros">
-                <p>Seus números da sorte!</p>
-                <p id="numerosAparecer"><span>...</span></p>
+            <!-- ONDE A PESSOA SELECIONA QUAL JOGO QUER OS NÚMEROS -->
+            <div class="botoes">
+                <button onclick="megaSena()">Mega-Sena</button>
+                <button onclick="lotoFacil()">Lotofácil</button>
+                <button onclick="quiNa()">Quina</button>
             </div>
+
+            <!-- MEGASENA -->
+            <div class="megaSena">
+                <h2><strong>Gerar números da <span>Mega-Sena</span></strong></h2>
+
+                <p>Quantidade de números</p>
+                <select id="quantidadeNum">
+                    <option value="6" selected>6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+                <form class="imparPar">
+                    <div class="impar">
+                        <label for="impar">Números Impares</label>
+                        <input type="radio" value="impar" id="impar" name="imparOuPar">
+                    </div>
+                    <div class="par">
+                        <label for="par">Números Pares</label>
+                        <input type="radio" value='par' id="par" name="imparOuPar">
+                    </div>
+                    <div class="ambos">
+                        <label for="parImpar">Ambos</label>
+                        <input type="radio" value="parImpar" id="parImpar" name="imparOuPar" checked>
+                    </div>
+                </form>
+        
+                <p><button class="gerar" onclick="numMax(), gerar()">Gerar números</button></p>
+        
+                <div class="numeros">
+                    <p>Seus números da sorte!</p>
+                    <p id="numerosAparecer"><span>...</span></p>
+                </div>
+            </div>
+
+            <!-- LOTOFACIL -->
+            <div class="lotoFacil">
+                <h2><strong>Gerar números da <span>Lotofácil</span></strong></h2>
+
+                <p>Quantidade de números</p>
+                <select id="quantidadeNumLoto">
+                    <option value="15" selected>15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+
+                </select>
+                <form class="imparPar">
+                    <div class="ambos">
+                        <label for="parImpar">Ambos</label>
+                        <input type="radio" value="parImpar" id="parImpar" name="imparOuPar" checked>
+                    </div>
+                </form>
+        
+                <p><button class="gerar" onclick="numMaxLoto(), gerarLoto()">Gerar números</button></p>
+        
+                <div class="numeros-loto">
+                    <p>Seus números da sorte!</p>
+                    <p id="mudarLoto"><span>...</span></p>
+                </div>
+            </div>
+
+            <!-- QUINA -->
+            <div class="quina">
+                <h2><strong>Gerar números da <span>Quina</span></strong></h2>
+
+                <p>Quantidade de números</p>
+                <select id="quantidadeNumQuina">
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+
+                <form class="imparPar">
+                    <div class="impar">
+                        <label for="imparQuina">Números Impares</label>
+                        <input type="radio" value="impar" id="imparQuina" name="imparOuParQuina">
+                    </div>
+                    <div class="par">
+                        <label for="parQuina">Números Pares</label>
+                        <input type="radio" value='par' id="parQuina" name="imparOuParQuina">
+                    </div>
+                    <div class="ambos">
+                        <label for="parImparQuina">Ambos</label>
+                        <input type="radio" value="parImpar" id="parImparQuina" name="imparOuParQuina" checked>
+                    </div>
+                </form>
+        
+                <p><button class="gerar" onclick="numMaxQuina(), gerarQuina()">Gerar números</button></p>
+        
+                <div class="numeros-quina">
+                    <p>Seus números da sorte!</p>
+                    <p id="mudarQuina"><span>...</span></p>
+                </div>
+            </div>
+
         </div>
     </main>
 
