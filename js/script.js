@@ -1,6 +1,8 @@
 var numeros = document.querySelector('.numeros')
 var numerosLoto = document.querySelector('.numeros-loto')
 var numerosQuina = document.querySelector('.numeros-quina')
+var numerosMilionaria = document.querySelector('.numeros-milionaria')
+var milionaria = document.querySelector('.milionaria')
 var lotofacil = document.querySelector('.lotoFacil')
 var megasena = document.querySelector('.megaSena')
 var quina = document.querySelector('.quina')
@@ -12,6 +14,8 @@ function lotoFacil(){
     numeros.style.display = 'none'
     quina.style.display = 'none'
     numerosQuina.style.display = 'none'
+    milionaria.style.display = 'none'
+    numerosMilionaria.style.display = 'none'
 }
 
 function megaSena(){
@@ -20,12 +24,26 @@ function megaSena(){
     numerosLoto.style.display = 'none'
     quina.style.display = 'none'
     numerosQuina.style.display = 'none'
+    milionaria.style.display = 'none'
+    numerosMilionaria.style.display = 'none'
 }
 
 function quiNa(){
     quina.style.display = 'block'
     lotofacil.style.display = 'none'
     numerosLoto.style.display = 'none'
+    megasena.style.display = 'none'
+    numeros.style.display = 'none'
+    milionaria.style.display = 'none'
+    numerosMilionaria.style.display = 'none'
+}
+
+function milioNaria(){
+    milionaria.style.display = 'block'
+    quina.style.display = 'none'
+    lotofacil.style.display = 'none'
+    numerosLoto.style.display = 'none'
+    numerosQuina.style.display = 'none'
     megasena.style.display = 'none'
     numeros.style.display = 'none'
 }
@@ -146,4 +164,43 @@ function gerarQuina(){
     }
     var aparecerQuina = document.getElementById('mudarQuina')
     aparecerQuina.innerHTML = valoresQuina.sort()
+}
+
+/* MILIONÁRIA */
+
+function numMaxMilionaria(){
+    var select = document.querySelector('#quantidadeNumMilionaria')
+    var valor = select.value
+    for(var c = 0; valor >= c; c++){
+        numeroMax = c
+    }
+}
+
+function gerarMilionária(){
+    valoresMilionaria = []
+    trevosMilionaria = []
+    numerosMilionaria.style.display = 'block'
+    var quantidadeTrevos = document.getElementById('quantidadeTrevosMilionaria').value
+
+    while (valoresMilionaria.length < numeroMax){
+        var resultadoMilionaria = sorteio()
+        if(valoresMilionaria.indexOf(resultadoMilionaria) === -1){
+            if(resultadoMilionaria != 0){
+                valoresMilionaria.push(resultadoMilionaria)
+            }
+        }
+        var aparecerMilionaria = document.getElementById('mudarMilionaria')
+        aparecerMilionaria.innerHTML = valoresMilionaria.sort()
+    }
+
+    while (trevosMilionaria.length < quantidadeTrevos){
+        var totalTrevos = sorteio()
+        if(trevosMilionaria.indexOf(totalTrevos) === -1){
+            if(totalTrevos < 7 && totalTrevos >= 1) {
+                trevosMilionaria.push(totalTrevos)
+            }
+        }
+        var substituirTrevos = document.getElementById('trevos')
+        substituirTrevos.innerHTML = 'Trevos: ' + trevosMilionaria.sort()
+    }
 }

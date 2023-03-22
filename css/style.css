@@ -90,6 +90,8 @@ main select{
     padding: 0px 30px;
 }
 
+/*BOTOES*/
+
 .botoes{
     padding: 20px;
 }
@@ -101,12 +103,15 @@ main select{
     border: none;
     border-radius: 10px;
     transition: .2s;
+    width: 200px;
 }
 
 .botoes button:hover{
     background-color: rgb(26, 5, 77);
     transition: .2s;
 }
+
+/*LOTOFACIL E MEGASENA*/
 
 .lotoFacil{
     display: none;
@@ -160,6 +165,40 @@ main select{
 }
 
 .numeros-quina p{
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* MILIONARIA */
+
+.milionaria{
+    display: none;
+    padding-bottom: 100px;
+}
+
+.milionaria span{
+    color: rgb(255, 230, 0);
+}
+
+.numerosTrevos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.numeros-milionaria{
+    background-color: rgb(216, 216, 216);
+    width: 600px;
+    height: 150px;
+    border-radius: 20px;
+    margin: auto;
+    display: none;
+}
+
+.numeros-milionaria p{
     font-size: 20px;
     padding-top: 10px;
     text-align: center;

@@ -21,6 +21,7 @@
                 <button onclick="megaSena()">Mega-Sena</button>
                 <button onclick="lotoFacil()">Lotofácil</button>
                 <button onclick="quiNa()">Quina</button>
+                <button onclick="milioNaria()">Milionária</button>
             </div>
 
             <!-- MEGASENA -->
@@ -123,6 +124,51 @@
                 <div class="numeros-quina">
                     <p>Seus números da sorte!</p>
                     <p id="mudarQuina"><span>...</span></p>
+                </div>
+            </div>
+
+            <!-- MILIONÁRIA -->
+            <div class="milionaria">
+                <h2><strong>Gerar números da <span>Milionária</span></strong></h2>
+
+                <div class="numerosTrevos">
+                    <div class="numbers">
+                        <p>Quantidade de números</p>
+                        <select id="quantidadeNumMilionaria">
+                            <option value="6" selected>6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="trevos">
+                        <p>Quantidade de Trevos</p>
+                        <select id="quantidadeTrevosMilionaria">
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+
+                <form class="imparPar">
+                    <div class="ambos">
+                        <label for="parImparMilio">Ambos</label>
+                        <input type="radio" value="parImpar" id="parImparMilio" name="imparOuParMilio" checked>
+                    </div>
+                </form>
+        
+                <p><button class="gerar" onclick="numMaxMilionaria(), gerarMilionária()">Gerar números</button></p>
+        
+                <div class="numeros-milionaria">
+                    <p>Seus números da sorte!</p>
+                    <p id="mudarMilionaria">...</p>
+                    <p id="trevos">...</p>
                 </div>
             </div>
 
